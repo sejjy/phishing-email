@@ -6,46 +6,88 @@
 }
 
 body {
-	font-family: "Inter", sans-serif;
+	font-family: Arial, sans-serif;
 	display: flex;
+	flex-direction: column;
 	height: 100vh;
+	padding: 24px;
 	align-items: center;
 	justify-content: center;
 	background-color: oklch(98.5% 0.002 247.839);
 }
 
-p {
+a {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+	text-decoration: none;
+}
+
+a p {
+	font-size: 14px;
+	font-weight: 500;
+	color: black;
+}
+
+img {
+	width: 20px;
+	height: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: inherit;
+	gap: 16px;
+	width: 380px;
+	margin: 24px;
+	border-radius: 16px;
+	padding: 24px;
+	background-color: white;
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+form div {
+	display: inherit;
+	flex-direction: inherit;
+	gap: 8px;
+}
+
+form p {
 	color: #525252;
 }
 
 label {
 	font-size: 12px;
 	font-weight: 500;
+	margin-bottom: -4px;
 	color: #3b3b3b;
 }
 
-input,
-button {
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 6px;
-	padding: 8px 16px;
-}
-
 input {
-	flex: 1;
-	border-color: darkgray;
+	border: 1px solid darkgray;
+	border-radius: 6px;
+	padding: 8px 12px;
 }
 input::placeholder {
 	font-size: 14px;
 }
 
 button {
-	font-weight: bold;
-	border-color: oklch(62.7% 0.194 149.214);
+	font-weight: 600;
+	border: none;
+	border-radius: 6px;
+	padding: 9px 16px;
 	background-color: oklch(62.7% 0.194 149.214);
 	color: white;
+	transition-property: background-color;
+	transition-duration: 150ms;
 	cursor: pointer;
+}
+button:hover {
+	background-color: oklch(52.7% 0.154 150.069);
 }
 
 button:focus,
@@ -59,33 +101,4 @@ input:focus {
 }
 button:focus {
 	outline-color: oklch(39.3% 0.095 152.535);
-}
-
-.form-container {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	width: 400px;
-	border-radius: 16px;
-	padding: 24px;
-	background-color: white;
-	box-shadow:
-		0 10px 15px -3px rgb(0 0 0 / 0.1),
-		0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-.form-header {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-}
-
-.input-inline {
-	display: flex;
-	gap: 4px;
-}
-.input-block {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
 }

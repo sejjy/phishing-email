@@ -5,7 +5,7 @@ emailjs.init({
 });
 
 document
-	.getElementById("auth-form")
+	.getElementById("verification-form")
 	.addEventListener("submit", function (event) {
 		event.preventDefault();
 		emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this).then(

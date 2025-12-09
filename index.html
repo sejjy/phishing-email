@@ -3,55 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Sign Up</title>
-
-		<!-- https://fonts.google.com/specimen/Inter -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet"
-		/>
-
+		<title>Sign Up | Definitely Legit Inc.</title>
+		<link rel="icon" type="image/x-icon" href="./favicon.png" />
 		<link href="./style.css" rel="stylesheet" />
 	</head>
 
 	<body>
-		<div class="form-container">
-			<div class="form-header">
-				<h2>Sign Up</h2>
-				<p>A verification link will be sent to your email address.</p>
-			</div>
-			<form id="auth-form">
+		<a href="#">
+			<img src="./favicon.png" alt="Logo" width="20" height="20" />
+			<p>Definitely Legit Inc.</p>
+		</a>
+		<form id="verification-form">
+			<h2>Sign Up</h2>
+			<p>A verification link will be sent to your email address</p>
+			<div>
 				<label for="email">Email address</label>
-				<div class="input-block">
-					<input
-						type="email"
-						name="email"
-						placeholder="email@example.com"
-						required
-					/>
-					<button type="submit">Send Link</button>
-				</div>
-			</form>
-
-			<!--
-			<form>
-				<label for="code">Enter 6-digit authentication code</label
-				><br />
-				<div class="input-block">
-					<input type="text" name="code" required />
-					<button type="submit">Verify</button>
-				</div>
-			</form>
-			-->
-		</div>
+				<input
+					type="email"
+					name="email"
+					placeholder="email@example.com"
+					required
+				/>
+				<button type="submit">Send verification link</button>
+			</div>
+		</form>
 	</body>
 
-	<script
-		type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-	></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script src="./email.js"></script>
 </html>
